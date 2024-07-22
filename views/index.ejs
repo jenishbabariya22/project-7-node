@@ -1,0 +1,1307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/e6fb7f322e.js"></script>
+    <link src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    </script>
+    <title>Document</title>
+    <style>
+        a:hover{
+            text-decoration: none!important;
+            color: #ff2db9;
+        }
+        @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+        /*CODES STARTS HERE*/
+
+        body {
+            font-family: 'Figtree', sans-serif;
+            background-color: #fff;
+            color: #3b3b3b;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            
+            background: #fafafa;
+            color: #000;
+            font-size: 14px;
+            font-family: "Segoe UI", sans-serif;
+            line-height: 1.3;
+        }
+
+        a {
+            color: #262626;
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+        * {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 74%;
+            max-width: 1400px;
+            margin: 0 auto;
+
+            @media (max-width: 767px) {
+                width: auto;
+                padding: 0 16px;
+            }
+
+            @media (min-width: 766px) and (max-width: 991px) {
+                width: 90%;
+            }
+
+            .grid-wrapper {
+                display: flex;
+
+                @media (max-width: 767px) {
+                    flex-direction: column;
+                }
+
+                .articles {
+                    flex-basis: 64%;
+                    margin-right: 30px;
+
+                    @media (max-width: 767px) {
+                        margin: 2rem 0 0 0;
+                        order: 2;
+                    }
+
+                    article {
+                        border-radius: 3px;
+                        border: 1px solid #e6e6e6;
+                        background: #fff;
+
+                        &:not(:last-child) {
+                            margin-bottom: 1rem;
+                        }
+
+                        header {
+                            padding: 16px;
+                            border-bottom: 1px solid #e6e6e6;
+                            display: flex;
+
+                            .post-author {
+                                display: flex;
+                                align-items: center;
+
+                                img {
+                                    width: 32px;
+                                    height: 32px;
+                                    border-radius: 50%;
+                                    margin-right: 0.7em;
+                                }
+
+                                .column-wrapper {
+                                    .author-link {
+                                        font-weight: 500;
+                                    }
+
+                                    .location {
+                                        margin-left: 0.2em;
+
+                                        a {
+                                            font-size: 12px;
+                                        }
+                                    }
+                                }
+                            }
+
+                            .follow-user {
+                                margin-left: auto;
+                                border: 1px solid #e6e6e6;
+                                background: #fff;
+                                border-radius: 3px;
+                                font-family: inherit;
+                                padding: 0 1em;
+                                cursor: pointer;
+
+                                i {
+                                    margin-right: 0.4em;
+                                }
+                            }
+                        }
+
+                        .image-wrapper {
+                            img {
+                                width: 100%;
+                                vertical-align: text-bottom;
+                            }
+                        }
+
+                        footer {
+                            .interactions {
+                                display: flex;
+                                padding: 0.9em 16px 0;
+
+                                i {
+                                    margin-right: 0.5em;
+                                    font-size: 18px;
+                                }
+
+                                .bookmark {
+                                    margin-left: auto;
+                                }
+                            }
+
+                            .author-comment {
+                                padding: 1em 16px;
+
+                                a {
+                                    font-weight: 500;
+                                }
+                            }
+
+                            .comments-box {
+                                padding: 0 16px;
+
+                                .comment-block {
+                                    padding: 0.2em 0;
+
+                                    a {
+                                        font-weight: 500;
+                                    }
+                                }
+                            }
+
+                            .post-date {
+                                padding: 0.5em 16px;
+                                border-bottom: 1px solid #eee;
+
+                                a {
+                                    text-transform: uppercase;
+                                    font-size: 10px;
+                                    color: #999;
+                                }
+                            }
+
+                            .comments-area {
+                                textarea {
+                                    margin: 0px;
+                                    padding: 1em 16px;
+                                    border: 0px;
+                                    width: 100%;
+                                    height: 100%;
+                                    vertical-align: text-bottom;
+                                    z-index: auto;
+                                    font-size: 14px;
+                                    outline: none;
+                                    resize: none;
+                                    color: #999;
+                                    font-family: "Segoe UI", sans-serif;
+
+                                    &::placeholder {
+                                        color: inherit;
+                                        font-size: inherit;
+                                        font-family: inherit;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .sidebar {
+                    flex-grow: 1;
+
+                    @media (max-width: 767px) {
+                        order: 1;
+                    }
+
+                    .user-profile {
+                        display: flex;
+                        align-items: center;
+                        margin-bottom: 1.2rem;
+                        border-bottom: 1px solid #e6e6e6;
+                        padding-bottom: 16px;
+
+                        img {
+                            width: 50px;
+                            height: 50px;
+                            border-radius: 50%;
+                            margin-right: 0.5em;
+                        }
+
+                        .column-wrapper {
+                            a {
+                                font-size: 14px;
+                                font-weight: 500;
+                            }
+
+                            span {
+                                font-size: 12px;
+                                color: #999;
+                            }
+                        }
+                    }
+
+                    .stories {
+                        .stories-header {
+                            display: flex;
+                            font-size: 14px;
+                            margin-bottom: 16px;
+
+                            span {
+                                color: #999;
+                                font-weight: 600;
+                            }
+
+                            a {
+                                font-weight: 500;
+                                margin-left: auto;
+                            }
+                        }
+
+                        .friends-stories {
+                            .story-block {
+                                display: flex;
+                                align-items: center;
+
+                                &:not(:last-child) {
+                                    margin-bottom: 1rem;
+                                }
+
+                                img {
+                                    width: 50px;
+                                    height: 50px;
+                                    border-radius: 50%;
+                                    margin-right: 0.5em;
+                                }
+
+                                .column-wrapper {
+                                    a {
+                                        font-weight: 600;
+                                    }
+
+                                    span {
+                                        text-transform: uppercase;
+                                        font-size: 10px;
+                                        color: #999;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        body {
+           
+            background: #fafafa;
+            color: #000;
+            font-size: 14px;
+            font-family: "Segoe UI", sans-serif;
+            line-height: 1.3;
+        }
+
+        a {
+            color: #262626;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        * {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 74%;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        @media (max-width: 767px) {
+            .container {
+                width: auto;
+                padding: 0 16px;
+            }
+        }
+
+        @media (min-width: 766px) and (max-width: 991px) {
+            .container {
+                width: 90%;
+            }
+        }
+
+        .container .grid-wrapper {
+            display: flex;
+        }
+
+        @media (max-width: 767px) {
+            .container .grid-wrapper {
+                flex-direction: column;
+            }
+        }
+
+        .container .grid-wrapper .articles {
+            flex-basis: 64%;
+            margin-right: 90px;
+        }
+
+        @media (max-width: 767px) {
+            .container .grid-wrapper .articles {
+                margin: 2rem 0 0 0;
+                order: 2;
+            }
+        }
+
+        .container .grid-wrapper .articles article {
+            border-radius: 3px;
+            border: 1px solid #e6e6e6;
+            background: #fff;
+        }
+
+        .container .grid-wrapper .articles article:not(:last-child) {
+            margin-bottom: 1rem;
+        }
+
+        .container .grid-wrapper .articles article header {
+            padding: 16px;
+            border-bottom: 1px solid #e6e6e6;
+            display: flex;
+        }
+
+        .container .grid-wrapper .articles article header .post-author {
+            display: flex;
+            align-items: center;
+        }
+
+        .container .grid-wrapper .articles article header .post-author img {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            margin-right: 0.7em;
+        }
+
+        .container .grid-wrapper .articles article header .post-author .column-wrapper .author-link {
+            font-weight: 500;
+        }
+
+        .container .grid-wrapper .articles article header .post-author .column-wrapper .location {
+            margin-left: 0.2em;
+        }
+
+        .container .grid-wrapper .articles article header .post-author .column-wrapper .location a {
+            font-size: 12px;
+        }
+
+        .container .grid-wrapper .articles article header .follow-user {
+            margin-left: auto;
+            border: 1px solid #e6e6e6;
+            background: #fff;
+            border-radius: 3px;
+            font-family: inherit;
+            padding: 0 1em;
+            cursor: pointer;
+        }
+
+        .container .grid-wrapper .articles article header .follow-user i {
+            margin-right: 0.4em;
+        }
+
+        .container .grid-wrapper .articles article .image-wrapper img {
+            width: 100%;
+            vertical-align: text-bottom;
+        }
+
+        .container .grid-wrapper .articles article footer .interactions {
+            display: flex;
+            padding: 0.9em 16px 0;
+        }
+
+        .container .grid-wrapper .articles article footer .interactions i {
+            margin-right: 0.5em;
+            font-size: 18px;
+        }
+
+        .container .grid-wrapper .articles article footer .interactions .bookmark {
+            margin-left: auto;
+        }
+
+        .container .grid-wrapper .articles article footer .author-comment {
+            padding: 1em 16px;
+        }
+
+        .container .grid-wrapper .articles article footer .author-comment a {
+            font-weight: 500;
+        }
+
+        .container .grid-wrapper .articles article footer .comments-box {
+            padding: 0 16px;
+        }
+
+        .container .grid-wrapper .articles article footer .comments-box .comment-block {
+            padding: 0.2em 0;
+        }
+
+        .container .grid-wrapper .articles article footer .comments-box .comment-block a {
+            font-weight: 500;
+        }
+
+        .container .grid-wrapper .articles article footer .post-date {
+            padding: 0.5em 16px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .container .grid-wrapper .articles article footer .post-date a {
+            text-transform: uppercase;
+            font-size: 10px;
+            color: #999;
+        }
+
+        .container .grid-wrapper .articles article footer .comments-area textarea {
+            margin: 0px;
+            padding: 1em 16px;
+            border: 0px;
+            width: 100%;
+            height: 100%;
+            vertical-align: text-bottom;
+            z-index: auto;
+            font-size: 14px;
+            outline: none;
+            resize: none;
+            color: #999;
+            font-family: "Segoe UI", sans-serif;
+        }
+
+        .container .grid-wrapper .articles article footer .comments-area textarea::placeholder {
+            color: inherit;
+            font-size: inherit;
+            font-family: inherit;
+        }
+
+        .container .grid-wrapper .sidebar {
+            flex-grow: 1;
+        }
+
+        @media (max-width: 767px) {
+            .container .grid-wrapper .sidebar {
+                order: 1;
+            }
+        }
+
+        .container .grid-wrapper .sidebar .user-profile {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.2rem;
+            border-bottom: 1px solid #e6e6e6;
+            padding-bottom: 16px;
+        }
+
+        .container .grid-wrapper .sidebar .user-profile img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 0.5em;
+        }
+
+        .container .grid-wrapper .sidebar .user-profile .column-wrapper a {
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .container .grid-wrapper .sidebar .user-profile .column-wrapper span {
+            font-size: 12px;
+            color: #999;
+        }
+
+        .container .grid-wrapper .sidebar .stories .stories-header {
+            display: flex;
+            font-size: 14px;
+            margin-bottom: 16px;
+        }
+
+        .container .grid-wrapper .sidebar .stories .stories-header span {
+            color: #999;
+            font-weight: 600;
+        }
+
+        .container .grid-wrapper .sidebar .stories .stories-header a {
+            font-weight: 500;
+            margin-left: auto;
+        }
+
+        .container .grid-wrapper .sidebar .stories .friends-stories .story-block {
+            display: flex;
+            align-items: center;
+        }
+
+        .container .grid-wrapper .sidebar .stories .friends-stories .story-block:not(:last-child) {
+            margin-bottom: 1rem;
+        }
+
+        .container .grid-wrapper .sidebar .stories .friends-stories .story-block img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 0.5em;
+        }
+
+        .container .grid-wrapper .sidebar .stories .friends-stories .story-block .column-wrapper a {
+            font-weight: 600;
+        }
+
+        .container .grid-wrapper .sidebar .stories .friends-stories .story-block .column-wrapper span {
+            text-transform: uppercase;
+            font-size: 10px;
+            color: #999;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        input {
+            text-align: center;
+        }
+
+        /*LEFT MENU CODES HERE*/
+        .leftMenu {
+            width: 244px;
+            height: 100vh;
+            position: fixed;
+            border-right: 1px solid #e3e2e2;
+        }
+
+        .leftMenu i {
+            font-size: 1.4rem;
+            margin-right: 0.9rem;
+            padding: 0.3rem 0 0 0;
+        }
+
+        .middleMenu {
+            margin: 0 0 0.7rem 1rem;
+            font-size: 01rem;
+            height: 2.5rem;
+            width: 12rem;
+            padding: 0.3rem 0 0 0.5rem;
+            border-radius: 0.5rem;
+        }
+
+        .bottomMenu {
+            margin: 0.5rem 0 0 1rem;
+            font-size: 1rem;
+            height: 2.5rem;
+            width: 12rem;
+            padding: 0.4rem 0 0 0.5rem;
+            border-radius: 0.5rem;
+        }
+
+        .instagramTextLogo {
+            width: 6.8rem;
+            margin: 2.1em 1.3rem;
+        }
+
+        #threads {
+            margin-top: 4.3rem;
+        }
+
+        #home:hover,
+        #search:hover,
+        #discover:hover,
+        #reels:hover,
+        #messages:hover,
+        #notifications:hover,
+        #create:hover,
+        #profile:hover,
+        #threads:hover,
+        #more:hover {
+            background-color: #f1f1f1;
+            transition: 0.5s;
+            cursor: pointer;
+        }
+
+        /* STORY CODES HERE */
+
+        .storyArea {
+            width: 41.3%;
+            height: 5rem;
+            position: absolute;
+            left: 23%;
+            margin-top: 3rem;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .storyArea p {
+            padding-top: 4rem;
+            font-size: 0.8rem;
+            color: #707070;
+        }
+
+        .stories {
+            width: 3.5rem;
+            height: 3.5rem;
+            background-color: rgb(239, 239, 239);
+            border-radius: 50px;
+            display: inline-block;
+            margin-right: 1rem;
+            border: 3px solid #f9529a;
+            cursor: pointer;
+        }
+
+        /*POST CODES HERE*/
+
+        .post1 {
+            width: 30.8%;
+            position: absolute;
+            left: 30%;
+            top: 11.4rem;
+        }
+
+        .postPP {
+            width: 1.9rem;
+            height: 1.9rem;
+            border-radius: 100%;
+            margin: 0.6rem 0.6rem;
+            border: 1px solid #f9529a;
+            cursor: pointer;
+        }
+
+        .postID {
+            position: absolute;
+            top: 0.8rem;
+            left: 3.5rem;
+            font-size: 0.9rem;
+            cursor: pointer;
+        }
+
+        .firstPost {
+            width: 100%;
+            border-radius: 4px;
+            border: 1px solid #cccccc;
+        }
+
+        .reactions li {
+            font-size: 1.3rem;
+            display: inline-block;
+            padding: 0.2rem 0.4rem;
+            cursor: pointer;
+        }
+
+        .stick {
+            width: 30.8%;
+            height: 1px;
+            position: absolute;
+            background-color: #cccccc;
+            left: 30%;
+            top: 67rem;
+            margin: 1rem 0 1.2rem 0;
+        }
+
+        .post2 {
+            width: 30.8%;
+            position: absolute;
+            left: 30%;
+            top: 69rem;
+        }
+
+        .postPP2 {
+            width: 1.9rem;
+            height: 1.9rem;
+            border-radius: 100%;
+            margin: 0.6rem 0.6rem;
+            border: 1px solid #f9529a;
+            cursor: pointer;
+        }
+
+        .postID2 {
+            position: absolute;
+            top: 0.8rem;
+            left: 3.5rem;
+            font-size: 0.9rem;
+            cursor: pointer;
+        }
+
+        .firstPost2 {
+            width: 100%;
+            border-radius: 4px;
+            border: 1px solid #cccccc;
+        }
+
+        .reactions2 li {
+            font-size: 1.3rem;
+            display: inline-block;
+            padding: 0.2rem 0.4rem;
+            cursor: pointer;
+        }
+
+        .dots i {
+            position: absolute;
+            right: 1rem;
+            margin-top: -1.9rem;
+            font-size: 1.1rem;
+            cursor: pointer;
+        }
+
+        /*SUGGESTED USERS CODES HERE*/
+
+        .suggestions {
+            width: 20%;
+            height: 520px;
+            position: absolute;
+            right: 9%;
+            top: 3rem;
+        }
+
+        .sugProfile {
+            width: 2.7rem;
+            height: 2.7rem;
+            border: 1px solid #a8a8a8;
+            border-radius: 100%;
+            margin: 1rem 0 0rem 0.5rem;
+        }
+
+        .sugUser {
+            margin: 0.7rem 0 0 3.5rem;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+
+        .sugFollow {
+            position: absolute;
+            font-size: 0.7rem;
+            color: rgb(102, 184, 255);
+            font-weight: bold;
+            cursor: pointer;
+            right: 1rem;
+            margin: -0.9rem 0 0 0;
+        }
+
+        .sugLinks {
+            font-size: 0.8rem;
+            color: #d8d8d8;
+            cursor: pointer;
+            margin: 1rem 0 0 0.5rem;
+            line-height: 1.2rem;
+        }
+
+
+        /*RESPONSIVE DESIGN CODES HERE*/
+
+        .mobileLeftMenu {
+            height: 100vh;
+            width: 4.3rem;
+            border: 1px solid rgb(214, 214, 214);
+            position: fixed;
+        }
+
+        .mobileBtns i,
+        .mbottomMenu i {
+            font-size: 1.4rem;
+            margin-right: 0.9rem;
+            padding: 0.3rem 0 0 0;
+        }
+
+        .mobileBtns {
+            margin: 0 0 0.7rem 1rem;
+            font-size: 01rem;
+            height: 2.5rem;
+            width: 12rem;
+            padding: 0.3rem 0 0 0.5rem;
+            border-radius: 0.5rem;
+        }
+
+        .minstagramLogo {
+            width: 2.7rem;
+            margin: 2.2em 1rem;
+        }
+
+        #mbars {
+            margin-top: 7rem;
+        }
+
+        .mbottomMenu {
+            margin: 0.5rem 0 0 1rem;
+            font-size: 1rem;
+            height: 2.5rem;
+            width: 12rem;
+            padding: 0.4rem 0 0 0.5rem;
+            border-radius: 0.5rem;
+        }
+
+        .mobileHeader {
+            width: 100%;
+            height: 3.8rem;
+            border-bottom: 1px solid #d8d8d8;
+            position: fixed;
+            background-color: #fff;
+        }
+
+        .mobileTextLogo {
+            width: 6.8rem;
+            margin: 0.7em 1rem;
+        }
+
+        .mobileHeader i {
+            font-size: 1.5rem;
+            position: absolute;
+            right: 0;
+            margin: 1rem;
+        }
+
+        .mobileHeader input {
+            width: 35%;
+            font-size: 1.2rem;
+            color: #a8a8a8;
+            background-color: #eaeaea;
+            position: absolute;
+            right: 3rem;
+            margin: 1rem;
+            border: none;
+            padding: 0.1rem;
+            height: 2rem;
+            border-radius: 0.5rem;
+        }
+
+        .bottomBtns {
+            width: 100%;
+            height: 3.5rem;
+            background-color: #fff;
+            border-top: 1px solid #edecec;
+            position: fixed;
+            bottom: 0;
+            text-align: center;
+        }
+
+        .bBtns {
+            display: inline-block;
+            margin: 0 1rem;
+        }
+
+        .bBtns i {
+            font-size: 1.5rem;
+            margin: 0.5rem;
+
+            overflow: hidden;
+        }
+
+        .save i {
+            position: absolute;
+            right: 0;
+            bottom: 7rem;
+            margin-right: 0.5rem;
+        }
+
+        .save2 i {
+            position: absolute;
+            right: 0;
+            bottom: 13.5rem;
+            margin-right: 0.5rem;
+        }
+
+        #mhome,
+        #msearch,
+        #mdiscover,
+        #mreels,
+        #mmessages,
+        #mnotifications,
+        #mcreate,
+        #mprofile,
+        #mthreads,
+        #mmore,
+        #mbars {
+            width: 2.5rem;
+            height: 2.5rem;
+        }
+
+        #mhome:hover,
+        #msearch:hover,
+        #mdiscover:hover,
+        #mreels:hover,
+        #mmessages:hover,
+        #mnotifications:hover,
+        #mcreate:hover,
+        #mprofile:hover,
+        #mthreads:hover,
+        #mmore:hover,
+        #mbars:hover {
+            background-color: #f1f1f1;
+            transition: 0.5s;
+            cursor: pointer;
+        }
+
+
+        /*MEDIA CODES HERE*/
+
+        @media (max-width: 432px) {
+            .bottomBtns {
+                padding: 0.5rem 01rem;
+            }
+
+            .bBtns i {
+                font-size: 1.3rem;
+                margin: 0.1rem;
+
+                overflow: hidden;
+            }
+        }
+
+        @media (max-width: 347px) {
+            .bottomBtns {
+                padding: 0.1rem 0.1rem;
+            }
+
+            .bBtns i {
+                font-size: 1.3rem;
+                margin: 0rem;
+                overflow: hidden;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .bottomBtns {
+                padding: 0.5rem;
+            }
+
+            .bBtns i {
+                font-size: 1.2rem;
+            }
+        }
+
+        @media only screen and (max-width: 2000px) {
+            .mobileHeader {
+                display: none;
+            }
+
+            .mBottomBtns {
+                display: none;
+            }
+
+            .mobileLeftMenu {
+                display: none;
+            }
+        }
+
+        @media only screen and (max-width: 1263px) {
+            .leftMenu {
+                display: none;
+            }
+
+            .mobileBtns i {
+                font-size: 1.4rem;
+                margin-right: 0.9rem;
+                padding: 0.3rem 0 0 0;
+            }
+
+            .mobileLeftMenu {
+                display: block;
+            }
+
+        }
+
+        @media only screen and (max-width: 1160px) {
+            .rightPanel {
+                display: none;
+            }
+
+            .post1 {
+                width: 42%;
+                position: absolute;
+                left: 32%;
+                top: 11.4rem;
+            }
+
+            .stick {
+                width: 42%;
+                left: 32%;
+                top: 69rem;
+            }
+
+            .post2 {
+                width: 42%;
+                position: absolute;
+                left: 32%;
+                top: 71rem;
+            }
+
+            .storyArea {
+                width: 55%;
+                height: 5rem;
+                position: absolute;
+                left: 23%;
+                margin-top: 3rem;
+                text-align: center;
+                overflow: hidden;
+            }
+        }
+
+        @media only screen and (max-width: 766px) {
+            .mobileLeftMenu {
+                display: none;
+            }
+
+            .post1 {
+                width: 62%;
+                position: absolute;
+                left: 19%;
+                top: 11.4rem;
+            }
+
+            .stick {
+                width: 62%;
+                left: 19%;
+                top: 69rem;
+            }
+
+            .post2 {
+                width: 62%;
+                position: absolute;
+                left: 19%;
+                top: 71rem;
+            }
+
+            .storyArea {
+                width: 80%;
+                height: 5rem;
+                position: absolute;
+                left: 10%;
+                margin-top: 5.5rem;
+                text-align: center;
+                overflow: hidden;
+            }
+
+            .mobileHeader {
+                display: block;
+            }
+
+            .mBottomBtns {
+                display: block;
+            }
+        }
+
+        @media only screen and (max-width: 550px) {
+            .post1 {
+                width: 100%;
+                position: absolute;
+                top: 11.4rem;
+                left: 0rem;
+            }
+
+            .stick {
+                width: 100%;
+                top: 69rem;
+                left: 0rem;
+            }
+
+            .post2 {
+                width: 100%;
+                position: absolute;
+                top: 71rem;
+                left: 0rem;
+
+            }
+
+            .storyArea {
+                width: 90%;
+                left: 1rem;
+                height: 5rem;
+                position: absolute;
+                margin-top: 5.5rem;
+                text-align: center;
+                overflow: hidden;
+            }
+        }
+
+        /*THE END*/
+    </style>
+</head>
+
+<body>
+
+    <div class="leftMenu" style="margin-top: -70px;">
+        <div class="logo">
+            <a href="#">
+                
+                <img class="instagramTextLogo"
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/840px-Instagram_logo.svg.png"
+                    alt="">
+            </a>
+        </div>
+
+        <!--LEFT MENU CODES HERE-->
+
+        <ul id="leftMiddle " class="ps-2">
+            <a href="">
+            <li id="home" class="middleMenu">
+                <i class="fa-solid fa-house"></i>
+                <b>Home</b>
+            </li></a><a href="">
+            <li id="search" class="middleMenu">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                Search
+            </li></a><a href="">
+            <li id="discover" class="middleMenu">
+                <i class="fa-regular fa-compass"></i>
+                Explore
+            </li></a><a href="">
+            <li id="reels" class="middleMenu">
+                <i class="fa-solid fa-clapperboard"></i>
+                Reels
+            </li></a><a href="">
+            <li id="messages" class="middleMenu">
+                <i class="fa-brands fa-facebook-messenger"></i>
+                Messages
+            </li></a><a href="">
+            <li id="notifications" class="middleMenu">
+                <i class="fa-regular fa-heart"></i>
+                Notifications
+            </li></a>
+            <a href="/post">
+            <li id="create" class="middleMenu">
+                
+                    <i class="fa-regular fa-square-plus"></i>
+                    Create
+                
+            </li></a>
+            <a href="">
+            <li id="profile" class="middleMenu">
+                <i class="fa-regular fa-user"></i>
+                Profile
+            </li>
+        </a>
+        <a href="">
+            <li id="threads" class="bottomMenu">
+                <i class="fa-brands fa-threads"></i>
+                Threads
+            </li>
+        </a>
+       
+            <li id="more" class="bottomMenu">
+                <a href="/logout">
+                    <i class="fa-solid fa-bars"></i>
+                    log out
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="container" style="margin-left: 430px;margin-top: 70px;">
+        <div class="grid-wrapper">
+            <div class="articles">
+                <%record.map((val)=>{ %>
+                    <article>
+
+                        <header>
+                            <div class="post-author"><img
+                                    src="https://images.unsplash.com/profile-1559313846805-1ecfd9c00e4c?ixlib=rb-1.2.1&amp;q=80&amp;fm=jpg&amp;crop=faces&amp;cs=tinysrgb&amp;fit=crop&amp;h=128&amp;w=128"
+                                    alt="" />
+                                <div class="column-wrapper"><a class="author-link"
+                                        href="#"><%=locals.users.name%></a><br /><span class="location"><span> • </span><a
+                                            href="#">India</a></span>
+                                </div>
+
+                            </div>
+                            <div class="ms-auto">
+                                <a href="/deleterecord?deleteid=<%=val.id%>">
+                                    <button class="follow-user py-2" type="button"><i
+                                            class="fa-solid fa-trash"></i><span>Delete</span>
+                                    </button>
+                                </a>
+                                <a href="/editrecord?editid=<%=val.id%>">
+                                    <button class="follow-user py-2" type="button"><i
+                                            class="fa-solid fa-pen-to-square"></i><span>edit</span>
+                                    </button>
+                                </a>
+                            </div>
+                        </header>
+                        <div class="image-wrapper">
+                            <img src="<%=val.images%>" height="400" style="object-fit: cover;" alt="" /></div>
+                        <footer>
+                            <div class="interactions"><a href="#"><i class="fa fa-heart-o"></i></a><a href="#"><i
+                                        class="fa fa-comment-o"></i></a><a href="#"><i
+                                        class="fa fa-share-square-o"></i></a><a class="bookmark" href="#"><i
+                                        class="fa fa-bookmark-o"></i></a></div>
+                            <div class="author-comment"><a href="#">
+                                    
+                                <h6 class="mb-0"><%=val.title%></h6>
+                                </a><br><span>
+                                    <%=val.discription%>
+
+                                </span>
+                            </div>
+                            <div class="comments-box">
+                                <div class="comment-block"><a class="comment-author" href="#">themartingram</a><span>
+                                        Dream
+                                        🔥🔥🔥</span></div>
+                                <div class="comment-block"><a class="comment-author"
+                                        href="#">linsey_upside_down</a><span>
+                                        Cette photo est sublime. 👌💕</span></div>
+                            </div>
+                            <div class="post-date"><a href="#">1 day ago</a></div>
+                            <form class="comments-area"><textarea name="comment"
+                                    placeholder="Add a comment..."></textarea>
+                            </form>
+                        </footer>
+                    </article>
+                    <% })%>
+            </div>
+            <aside class="sidebar">
+                <div class="user-profile"><img
+                        src="https://images.unsplash.com/profile-fb-1572883288-28be3f1f3f63.jpg?ixlib=rb-1.2.1&amp;q=80&amp;fm=jpg&amp;crop=faces&amp;cs=tinysrgb&amp;fit=crop&amp;h=128&amp;w=128"
+                        alt="" />
+                    <div class="column-wrapper"><a class="user-profile-id" href="#">samermzaki</a><br /><span>Samer
+                            M.
+                            Zaki</span></div>
+                </div>
+                <div class="stories">
+
+                    <section class="friends-stories">
+                        <div class="story-block"><img
+                                src="https://images.unsplash.com/profile-1441310502617-da72b7132bc8?ixlib=rb-1.2.1&amp;q=80&amp;fm=jpg&amp;crop=faces&amp;cs=tinysrgb&amp;fit=crop&amp;h=128&amp;w=128"
+                                alt="" />
+                            <div class="column-wrapper"><a class="user-profile-id" href="#">ahmedhosna95</a><br /><span>
+                                    22 hours ago</span></div>
+                        </div>
+                        <div class="story-block"><img
+                                src="https://images.unsplash.com/profile-fb-1464898492-3defba6f0da0.jpg?ixlib=rb-1.2.1&amp;q=80&amp;fm=jpg&amp;crop=faces&amp;cs=tinysrgb&amp;fit=crop&amp;h=128&amp;w=128"
+                                alt="" />
+                            <div class="column-wrapper"><a class="user-profile-id" href="#">danamajzoub</a><br /><span>
+                                    22 hours ago</span></div>
+                        </div>
+                        <div class="story-block"><img
+                                src="https://images.unsplash.com/profile-1505730813263-335c44b52503?ixlib=rb-1.2.1&amp;q=80&amp;fm=jpg&amp;crop=faces&amp;cs=tinysrgb&amp;fit=crop&amp;h=128&amp;w=128"
+                                alt="" />
+                            <div class="column-wrapper"><a class="user-profile-id"
+                                    href="#">themartingram</a><br /><span> 22 hours ago</span></div>
+                        </div>
+                        <div class="story-block"><img
+                                src="https://images.unsplash.com/profile-fb-1524753041-55966b5934c3.jpg?ixlib=rb-1.2.1&amp;q=80&amp;fm=jpg&amp;crop=faces&amp;cs=tinysrgb&amp;fit=crop&amp;h=128&amp;w=128"
+                                alt="" />
+                            <div class="column-wrapper"><a class="user-profile-id" href="#">linsey_upside_down
+                                </a><br /><span> 22 hours ago</span></div>
+                        </div>
+                    </section>
+                </div>
+            </aside>
+        </div>
+    </div>
+    </div>
+
+</body>
+
+</html>
